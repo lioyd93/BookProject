@@ -1,0 +1,20 @@
+﻿@model CoolBooksProject.Models.Books
+
+
+
+<div class="thumbnail" >
+    <br />
+    <img alt="@Model.Title" src="@Model.ImagePath" style="max-height: 500px; max-width: 350px;">
+    <h3 class="pull-right">@Model.Genres.Name</h3>
+    
+    <div class="caption-full">
+        
+        
+        <h3><a href="#">@Model.Title</a></h3>
+            <h5>Author: @Model.Authors.FirstName @Model.Authors.LastName</h5>
+        
+        <br />
+        <div ><p>@Model.Description</p></div>
+
+    </div>
+</div>

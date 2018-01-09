@@ -1,0 +1,58 @@
+﻿
+@*@model  ListViewModel
+
+@using CoolBooksProject.ViewModels;*@
+
+
+
+
+<li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown"> 
+    Genres
+    <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+
+            @*@{ 
+             var nonDuplicatedGen =  Model.Books
+                    .Select(x => x.Genres.Name).Distinct();
+             }
+
+
+        @foreach (var gen in nonDuplicatedGen)
+        {
+            <li>
+                 @Html.ActionLink(gen, "List", "Home", new { genre = gen } , null) 
+           </li>
+        }*@
+
+
+        @*@foreach (var gen in Model.Books)
+
+        {
+             @Html.ActionLink(gen.Genres.Name, "List", "Home", new { genre = gen.Genres.Name } , null) 
+        }*@
+
+
+        <li>@Html.ActionLink("Biography", "List", "Home", new { genre = "Biography" } , null) </li>
+        <li>@Html.ActionLink("Classic", "List", "Home", new { genre = "Classic" } , null) </li>
+        <li>@Html.ActionLink("Comedy", "List", "Home", new { genre = "Comedy" } , null) </li>
+        <li>@Html.ActionLink("Crime", "List", "Home", new { genre = "Crime" } , null) </li>
+        <li>@Html.ActionLink("Drama", "List", "Home", new { genre = "Drama" } , null) </li>
+        <li>@Html.ActionLink("Fantasy", "List", "Home", new { genre = "Fantasy" } , null) </li>
+        <li>@Html.ActionLink("Horror", "List", "Home", new { genre = "Horror" } , null) </li>
+        <li>@Html.ActionLink("Memoir", "List", "Home", new { genre = "Memoir" } , null) </li>
+        <li>@Html.ActionLink("Mystery", "List", "Home", new { genre = "Mystery" } , null) </li>
+        <li>@Html.ActionLink("Realistic", "List", "Home", new { genre = "Realistic" } , null) </li>
+        <li>@Html.ActionLink("Romantic", "List", "Home", new { genre = "Romantic" } , null) </li>
+        <li>@Html.ActionLink("Satire", "List", "Home", new { genre = "Satire" } , null) </li>
+        <li>@Html.ActionLink("Science Fiction", "List", "Home", new { genre = "Science Fiction" } , null) </li>
+        <li>@Html.ActionLink("Thriller", "List", "Home", new { genre = "Thriller" } , null) </li>
+        <li>@Html.ActionLink("Tragedy", "List", "Home", new { genre = "Tragedy" } , null) </li>
+
+        <li class="divider"></li>
+        <li>        
+           @Html.ActionLink("All Product", "List", "Home" , new { genre = "" } , null)
+        </li>
+    </ul>
+</li>

@@ -1,0 +1,123 @@
+﻿@model CoolBooksProject.Models.Books
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+
+    <hr />
+    
+    <div class="container-fluid">
+        <div class="pull-right" >
+        <img alt="@Model.Title" class="img-thumbnail" src="@Model.ImagePath" width="150" height="200">
+        </div>
+        <dl class="dl-horizontal">
+
+
+                       <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+
+
+            <dt>
+                Author
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Authors.FirstName)
+            </dd>
+
+            <dt>
+                Genres
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Genres.Name)
+            </dd>
+
+ 
+                        <dt>
+               Added by
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AspNetUsers.Email)
+            </dd>
+
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.AlternativeTitle)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.AlternativeTitle)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Part)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Part)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ISBN)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ISBN)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishDate)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.PublishDate)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ImagePath)
+            </dt>
+
+
+            <dt>
+                @Html.DisplayNameFor(model => model.Created)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.Created)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.IsDeleted)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.IsDeleted)
+            </dd>
+
+        </dl>
+    </div>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,2 @@
+C:\Users\loay\Desktop\VTLF\CoolBooksProject\CoolBooksProject\obj\Debug\CoolBooksProject.csprojFakesResolveAssemblyReference.cache
+C:\Users\loay\Desktop\VTLF\CoolBooksProject\CoolBooksProject\obj\Debug\CoolBooksProject.csprojResolveAssemblyReference.cache

@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "BookLastest";
+}
+
+@model ListViewModel
+
+
+@using CoolBooksProject.ViewModels;
+
+ <h1>Latest 3 Added Books</h1>
+<br />
+
+<div class="col-md-12">
+    <div class="col-md-5">
+        @foreach (var book in Model.Books)
+        {
+
+            @Html.Partial("BookLastest", book)
+        }
+
+    </div>
+</div>
+
